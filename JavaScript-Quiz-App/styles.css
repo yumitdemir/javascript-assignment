@@ -1,0 +1,245 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, serif;
+}
+
+:root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+}
+
+body {
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), 100%, 20%);
+}
+
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#start-btn:hover {
+    background-color: #45a049;
+}
+
+#container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+
+    text-align: center;
+
+    max-height: 100vh; /* Set your desired maximum height */
+    overflow-y: auto;
+}
+
+.hide {
+    display: none !important; ;
+}
+
+/* Player Selection */
+.created-player-container {
+    display: flex;
+    gap: 1px;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    display: inline-block;
+    background: rgb(128, 128, 128);
+}
+
+.players-container {
+    width: 800px;
+    max-width: 80%;
+    display: flex;
+    gap: 2px;
+    justify-content: space-between;
+}
+
+.selected-red, .red {
+    background: red !important;
+}
+
+.selected-green , .green {
+    background: green !important;
+}
+
+.selected-blue , .blue{
+    background: blue !important;
+}
+
+.selected-purple , .purple{
+    background: purple !important;
+}
+
+.player-name {
+    color: white;
+}
+
+.disable {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+    pointer-events: none;
+    cursor: none;
+}
+
+.btn {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+}
+
+.btn:hover,
+.btn:focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    background-color: #F0F0F1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
+}
+
+
+
+
+
+/* Add this to your CSS to style the finish screen */
+#finish-screen {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+
+#finish-screen h1 {
+    color: #333;
+}
+
+#finish-screen h2 {
+    color: #555;
+}
+
+#winner-name {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+#ranking-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#ranking-list li {
+    margin: 5px;
+}
+
+#qa-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#qa-list li {
+    margin: 10px;
+}
+
+.margin-bottom{
+    margin-bottom: 50px;
+}
+
+.question-container {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Styles for the question number in the finish screen */
+.finish-screen-question {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Styles for the correct answer in the finish screen */
+.finish-screen-correct-answer {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Styles for the answers title in the finish screen */
+.finish-screen-answers-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Styles for the player's answer in the finish screen */
+.finish-screen-player-answer {
+    color:white;
+    margin-bottom: 5px;
+}
